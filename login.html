@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Log in!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="background">
+    <header class="header">
+      <img src="logo.png" alt="logo" />
+      <button type="button" class="today-button" date="12th May">
+        <a href="day.html">Today</a>
+      </button>
+      <div class="center">
+        <a href="month.html">May 2022</a>
+      </div>
+      <button type="button" class="classic-button">
+        <a href="user-create.html">Sign up</a>
+      </button>
+    </header>
+    <div class="center">
+      <form class="block">
+        <div class="center">
+          <h2>Log in</h2>
+        </div>
+        <div class="field-wrap">
+          <label for="username">Username</label>
+          <input
+            class="input-field"
+            type="text"
+            placeholder="Enter username"
+            id="username"
+            required
+          />
+        </div>
+        <div class="field-wrap">
+          <label for="password">Password</label>
+          <input
+            class="input-field"
+            type="password"
+            placeholder="Enter password"
+            id="password"
+            required
+          />
+        </div>
+
+        <p>
+          <input type="checkbox" />
+          Remember me
+        </p>
+        <div class="center">        <button type="submit" class="classic-button">Log in</button>
+        </div>
+        <p>
+          Don't have personal account yet?
+          <a href="user-create.html">Sign up</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,334 @@
+$background-color: white
+$border-color: darkblue
+$hover-color: #b6d7ff
+$big-text-color: darkblue
+$font-family: Comfortaa
+$font-label-size: 20px
+$font-regular-size: 16px
+
+@mixin flex
+  display: flex
+
+@mixin inline
+  display: inline
+
+@mixin block
+  display: block
+
+@mixin center
+  margin: auto
+
+.background
+  background-color: $background-color
+  background-image: url("1.png")
+  background-size: 450px
+  color: $big-text-color
+  font-family: $font-family
+  font-size: $font-label-size
+  padding: 0
+  margin: 0
+
+p
+  margin: 10px 0
+
+.flex
+  display: flex
+
+.header
+  position: fixed
+  width:100%
+  top: 0
+  background-color: $background-color
+  border-bottom: 2px solid $border-color
+  padding: 0 
+  margin: 0
+  @include flex
+  img
+    height: 50px
+    margin: 0 25px
+  a
+    @include inline
+    color: $big-text-color
+    margin: auto
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  .username
+    margin: auto 25px
+    color: $big-text-color
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+.block
+  background-color: $background-color
+  height: fit-content
+  @include center
+  margin-top: 100px
+  padding: 15px 25px
+  border-radius: 25px
+  border: 2px solid $border-color
+
+.center
+  margin: auto
+  width: fit-content
+
+.classic-button
+  background-color: $background-color
+  border: 2px solid $border-color
+  border-radius: 5px
+  font-family: $font-family
+  font-size: $font-label-size
+  color: $big-text-color
+  height: fit-content
+  padding: 5px 7px
+  margin: auto 10px
+  position: relative
+  &:hover
+    background-color: $hover-color
+  a
+    text-decoration: none
+    color: $big-text-color
+
+.today-button
+  background-color: $background-color
+  border: 2px solid $border-color
+  border-radius: 5px
+  font-family: $font-family
+  font-size: $font-label-size
+  color: $big-text-color
+  height: fit-content
+  padding: 5px 7px
+  margin: auto 25px
+  position: relative
+  &:hover
+    background-color: $hover-color
+  a
+    text-decoration: none
+    color: $big-text-color
+  &:hover::after
+    content: attr(date)
+    position: absolute
+    width: fit-content
+    margin: auto
+    left: 150%
+    z-index: 3
+    background: rgba(0,42,167,0.6)
+    border-radius: 5px
+    color: #fff
+    text-align: center
+    font-family: $font-family
+    font-size: 14px
+    padding: 5px
+
+.left-right-button
+  background-color: $background-color
+  margin: auto 0px
+  border: none
+  height: 30px
+  width: 30px
+  font-family: $font-family
+  font-size: 26px
+  font-weight: 300
+  color: $big-text-color
+  border-radius: 50%
+  &:hover
+    background-color: $hover-color
+  a
+    text-decoration: none
+
+.input-field
+  @include block
+  width: 100%
+  min-width: 350px
+  margin: 10px 0
+  padding: 5px
+  font-size: $font-label-size
+  font-family: $font-family
+  border: 1px solid $border-color
+  border-radius: 5px
+
+.timetable
+  position: relative
+  top: 52px
+  display: flex
+  width: 100%
+.side-box
+  position: fixed
+  top: 52px
+  width: fit-content
+  padding: 10px
+  height: 100%
+  min-height: 100vh
+  background: white
+  border-right: 2px solid $border-color
+  font-size: $font-label-size
+
+.small-calendar
+  margin: 15px 0
+  a
+    color: $big-text-color
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+.weekdays 
+  margin: 0
+  padding: 0
+  display: flex
+  background-color: $background-color
+
+.weekdays p 
+  display: inline
+  width: calc(100%/7)
+  text-align: center
+  color: $big-text-color
+  font-size: $font-regular-size
+
+.days 
+  margin: 0
+  padding: 0
+  width:210px
+
+.days p
+  display: inline-block
+  width: 30px
+  padding: 7.5px 0
+  margin: 0
+  text-align: center
+  border-radius: 100%
+  color: $big-text-color
+  font-size: $font-regular-size
+
+.days .active 
+  background: $hover-color
+
+.checkbox
+  accent-color: $border-color
+  height: 17px
+  width: 17px
+  margin: 10px
+
+.content
+  position: fixed
+  width: calc(100% - 232px)
+  margin-left: 232px
+  z-index:-1
+  padding: 0
+  height: calc(100% - 52px)
+  min-height: calc(100vh - 52px)
+
+table
+  width: 100%
+  height: calc(100% - 18px)
+  border: 1px solid
+  border-left: none
+  border-right: none
+  border-collapse: collapse
+
+tr
+  height: calc(100%/7)
+td
+  width: calc(100%/7)
+  padding: 0
+  background: $background-color
+  border: 1px solid
+  border-left: none
+  border-collapse: collapse
+
+.event
+  width: 100%
+  min-width: 250px
+  background-color: $background-color
+  height: fit-content
+  margin-top: 50px
+  padding: 10px 15px
+  border-radius: 25px
+  border: 2px solid $border-color
+  font-size: $font-regular-size
+  .classic-button
+    display: block
+    margin: 5px
+  .right
+    margin-right: 0
+    margin-left: auto
+  .title
+    font-size: $font-label-size
+  .category     
+    padding: 5px
+    margin: auto
+    margin-right: 0
+    background: $hover-color
+    border-radius: 5px
+  .datetime
+    padding: 0
+    margin: 0
+    font-size: $font-label-size
+  .description
+    font-size: $font-regular-size
+  .users
+    font-size: $font-regular-size
+    list-style-type: none
+    padding: 0
+    margin: 0
+    li
+      display: inline 
+      margin:  0 10px 0 0
+      padding: 0
+      text-align: left
+
+
+
+
+
+
+
+
+.overlay
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: rgba(0,0,0,0.5)
+  transition: opacity 200ms
+  visibility: hidden
+  opacity: 0
+  &.light
+    background: rgba(255,255,255,0.5)
+
+  .cancel
+    position: absolute
+    width: 100%
+    height: 100%
+    cursor: default
+
+  &:target
+    visibility: visible
+    opacity: 1
+
+.popup-block
+  margin: 75px auto
+  padding: 20px
+  border: 2px solid $border-color
+  border-radius: 25px
+  background-color: $background-color
+  width: fit-content
+  position: relative
+
+  .close
+    position: absolute
+    width: 20px
+    height: 20px
+    top: 20px
+    right: 20px
+    opacity: 0.8
+    transition: all 200ms
+    font-size: 24px
+    font-weight: bold
+    text-decoration: none
+    color: #666
+    &:hover
+      opacity: 1
+
+  

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="background">
+    <header class="header">
+      <img src="logo.png" alt="logo" />
+      <button type="button" class="today-button" date="12th May">
+        <a href="day.html">Today</a>
+      </button>
+      <div class="center">
+        <a href="month.html">May 2022</a>
+      </div>
+      <button type="button" class="classic-button">
+        <a href="login.html">Log in</a>
+      </button>
+    </header>
+    <div class="center">
+      <form class="block">
+        <div class="center">
+        <h2>Create your account</h2>
+      </div>
+        <div class="field-wrap">
+          <label for="username">Username</label>
+          <input
+          class="input-field"
+            type="text"
+            placeholder="Enter username"
+            id="username"
+            required
+          />
+        </div>
+        <div class="field-wrap">
+          <label for="email">Email</label>
+          <input
+          class="input-field"
+            type="text"
+            placeholder="Enter email"
+            id="email"
+            required
+          />
+        </div>
+        <div class="field-wrap">
+          <label for="phone-number">Phone number</label>
+          <input
+          class="input-field"
+            type="text"
+            placeholder="Enter phone number"
+            id="phone-number"
+            required
+          />
+        </div>
+        <div class="field-wrap">
+          <label for="password">Password</label>
+          <input
+          class="input-field"
+            type="password"
+            placeholder="Enter password"
+            id="password"
+            required
+          />
+        </div>
+        <div class="field-wrap">
+          <label for="confirm-password">Confirm password</label>
+          <input
+            class="input-field"
+            type="password"
+            placeholder="Confirm password"
+            id="confirm-password"
+            required
+          />
+        </div>
+
+        <p>
+          <input type="checkbox" />
+          I agree to the license terms.
+        </p>
+        <div class="center">
+        <button type="submit" class="classic-button">Sign Up</button>
+      </div>
+        <p>
+          Already have an account?
+          <a href="login.html"> Log in</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
