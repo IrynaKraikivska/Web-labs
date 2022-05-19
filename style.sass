@@ -1,22 +1,10 @@
-$background-color: white
-$border-color: darkblue
-$hover-color: #b6d7ff
-$big-text-color: darkblue
+@import './colors'
 $font-family: Comfortaa
 $font-label-size: 20px
 $font-regular-size: 16px
+$font-calendar-size: 12px
 
-@mixin flex
-  display: flex
 
-@mixin inline
-  display: inline
-
-@mixin block
-  display: block
-
-@mixin center
-  margin: auto
 
 .background
   background-color: $background-color
@@ -42,12 +30,12 @@ p
   border-bottom: 2px solid $border-color
   padding: 0 
   margin: 0
-  @include flex
-  img
+  display: flex
+  .logo
     height: 50px
     margin: 0 25px
-  a
-    @include inline
+  .link
+    display: inline
     color: $big-text-color
     margin: auto
     text-decoration: none
@@ -63,7 +51,7 @@ p
 .block
   background-color: $background-color
   height: fit-content
-  @include center
+  display: center
   margin-top: 100px
   padding: 15px 25px
   border-radius: 25px
@@ -86,9 +74,6 @@ p
   position: relative
   &:hover
     background-color: $hover-color
-  a
-    text-decoration: none
-    color: $big-text-color
 
 .today-button
   background-color: $background-color
@@ -103,9 +88,6 @@ p
   position: relative
   &:hover
     background-color: $hover-color
-  a
-    text-decoration: none
-    color: $big-text-color
   &:hover::after
     content: attr(date)
     position: absolute
@@ -134,11 +116,9 @@ p
   border-radius: 50%
   &:hover
     background-color: $hover-color
-  a
-    text-decoration: none
 
 .input-field
-  @include block
+  display: block
   width: 100%
   min-width: 350px
   margin: 10px 0
@@ -166,11 +146,12 @@ p
 
 .small-calendar
   margin: 15px 0
-  a
-    color: $big-text-color
-    text-decoration: none
-    &:hover
-      text-decoration: underline
+
+.link
+  color: $big-text-color
+  text-decoration: none
+  &:hover
+    text-decoration: underline
 
 .weekdays 
   margin: 0
@@ -218,7 +199,7 @@ p
   height: calc(100% - 52px)
   min-height: calc(100vh - 52px)
 
-table
+.calendar
   width: 100%
   height: calc(100% - 18px)
   border: 1px solid
@@ -230,11 +211,44 @@ tr
   height: calc(100%/7)
 td
   width: calc(100%/7)
-  padding: 0
+  padding: 3px
   background: $background-color
   border: 1px solid
   border-left: none
   border-collapse: collapse
+  div
+    height: 100%
+    text-align: center
+
+.active
+  margin: auto
+  display: block
+  width: 23px
+  margin-top: 3px
+  background: $hover-color
+  border-radius: 50%
+
+.calendar-event
+  border-radius: 5px
+  border: none
+  width: 95%
+  max-width: 95%
+  height: fit-content
+  margin: 5px
+  background: $hover-color
+  display: flex
+  .title
+    display: inline
+    text-align: center
+    margin: auto auto auto 3px
+    font-size: $font-calendar-size
+  .time
+    display: inline
+    margin: auto 3px auto auto
+    font-size: $font-calendar-size
+    
+
+
 
 .event
   width: 100%
@@ -271,11 +285,13 @@ td
     list-style-type: none
     padding: 0
     margin: 0
-    li
-      display: inline 
-      margin:  0 10px 0 0
-      padding: 0
-      text-align: left
+  .user
+    display: inline 
+    margin:  0 10px 0 0
+    padding: 0
+    text-align: left
+
+
 
 
 

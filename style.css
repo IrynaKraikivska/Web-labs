@@ -27,17 +27,17 @@ p {
   margin: 0;
   display: flex;
 }
-.header img {
+.header .logo {
   height: 50px;
   margin: 0 25px;
 }
-.header a {
+.header .link {
   display: inline;
   color: darkblue;
   margin: auto;
   text-decoration: none;
 }
-.header a:hover {
+.header .link:hover {
   text-decoration: underline;
 }
 .header .username {
@@ -52,7 +52,7 @@ p {
 .block {
   background-color: white;
   height: fit-content;
-  margin: auto;
+  display: center;
   margin-top: 100px;
   padding: 15px 25px;
   border-radius: 25px;
@@ -79,10 +79,6 @@ p {
 .classic-button:hover {
   background-color: #b6d7ff;
 }
-.classic-button a {
-  text-decoration: none;
-  color: darkblue;
-}
 
 .today-button {
   background-color: white;
@@ -98,10 +94,6 @@ p {
 }
 .today-button:hover {
   background-color: #b6d7ff;
-}
-.today-button a {
-  text-decoration: none;
-  color: darkblue;
 }
 .today-button:hover::after {
   content: attr(date);
@@ -133,9 +125,6 @@ p {
 }
 .left-right-button:hover {
   background-color: #b6d7ff;
-}
-.left-right-button a {
-  text-decoration: none;
 }
 
 .input-field {
@@ -172,11 +161,12 @@ p {
 .small-calendar {
   margin: 15px 0;
 }
-.small-calendar a {
+
+.link {
   color: darkblue;
   text-decoration: none;
 }
-.small-calendar a:hover {
+.link:hover {
   text-decoration: underline;
 }
 
@@ -233,7 +223,7 @@ p {
   min-height: calc(100vh - 52px);
 }
 
-table {
+.calendar {
   width: 100%;
   height: calc(100% - 18px);
   border: 1px solid;
@@ -248,11 +238,46 @@ tr {
 
 td {
   width: 14.2857142857%;
-  padding: 0;
+  padding: 3px;
   background: white;
   border: 1px solid;
   border-left: none;
   border-collapse: collapse;
+}
+td div {
+  height: 100%;
+  text-align: center;
+}
+
+.active {
+  margin: auto;
+  display: block;
+  width: 23px;
+  margin-top: 3px;
+  background: #b6d7ff;
+  border-radius: 50%;
+}
+
+.calendar-event {
+  border-radius: 5px;
+  border: none;
+  width: 95%;
+  max-width: 95%;
+  height: fit-content;
+  margin: 5px;
+  background: #b6d7ff;
+  display: flex;
+}
+.calendar-event .title {
+  display: inline;
+  text-align: center;
+  margin: auto auto auto 3px;
+  font-size: 12px;
+}
+.calendar-event .time {
+  display: inline;
+  margin: auto 3px auto auto;
+  font-size: 12px;
 }
 
 .event {
@@ -298,7 +323,7 @@ td {
   padding: 0;
   margin: 0;
 }
-.event .users li {
+.event .user {
   display: inline;
   margin: 0 10px 0 0;
   padding: 0;
