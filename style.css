@@ -232,7 +232,7 @@ p {
   border-collapse: collapse;
 }
 
-tr {
+.calendar-row {
   height: 14.2857142857%;
 }
 
