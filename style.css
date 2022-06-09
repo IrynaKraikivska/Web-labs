@@ -61,6 +61,7 @@ p {
 
 .center {
   margin: auto;
+  padding: 1px;
   width: fit-content;
 }
 
@@ -137,6 +138,10 @@ p {
   font-family: Comfortaa;
   border: 1px solid darkblue;
   border-radius: 5px;
+}
+
+#error-message {
+  color: red;
 }
 
 .timetable {

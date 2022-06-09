@@ -26,14 +26,14 @@
       </button>
     </header>
     <div class="center">
-      <form class="block">
+      <form class="block" id="signup-form">
         <div class="center">
-        <h2>Create your account</h2>
-      </div>
+          <h2>Create your account</h2>
+        </div>
         <div class="field-wrap">
           <label for="username">Username</label>
           <input
-          class="input-field"
+            class="input-field"
             type="text"
             placeholder="Enter username"
             id="username"
@@ -43,7 +43,7 @@
         <div class="field-wrap">
           <label for="email">Email</label>
           <input
-          class="input-field"
+            class="input-field"
             type="text"
             placeholder="Enter email"
             id="email"
@@ -53,7 +53,7 @@
         <div class="field-wrap">
           <label for="phone-number">Phone number</label>
           <input
-          class="input-field"
+            class="input-field"
             type="text"
             placeholder="Enter phone number"
             id="phone-number"
@@ -63,7 +63,7 @@
         <div class="field-wrap">
           <label for="password">Password</label>
           <input
-          class="input-field"
+            class="input-field"
             type="password"
             placeholder="Enter password"
             id="password"
@@ -86,13 +86,17 @@
           I agree to the license terms.
         </p>
         <div class="center">
-        <button type="submit" class="classic-button">Sign Up</button>
-      </div>
+          <button type="submit" class="classic-button">Sign Up</button>
+        </div>
+        <div class="center">
+          <span class="center" id="error-message"></span>
+        </div>
         <p>
           Already have an account?
           <a href="login.html"> Log in</a>
         </p>
       </form>
     </div>
+    <script src="./js/user-create.js"></script>
   </body>
 </html>

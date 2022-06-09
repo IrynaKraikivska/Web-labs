@@ -9,37 +9,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&amp;display=swap" rel="stylesheet">
   </head>
 
-  <body class="background">
-    <header class="header">
-      <img src="logo.png" alt="logo" class="logo"/>
-      <button type="button" class="today-button" date="19th May"><a href="day.html">Today</a></button>
-      <div class="center">
+  <body className="background" onload="showdata()">
+    <header className="header">
+      <img src="logo.png" alt="logo" className="logo"/>
+      <button type="button" className="today-button" date="19th May"><a href="day.html">Today</a></button>
+      <div className="center">
         <a href="month.html">May 2022</a>
       </div>
-      <button type="button" class="classic-button"><a href="month.html">To my plans</a></button>
+      <button type="button" className="classNameic-button"><a href="month.html">To my plans</a></button>
     </header>
-    <div class="center">
-      <div class="block">
-      <div class="center">
+    <div className="center">
+      <div className="block">
+      <div className="center">
         <h2>Your profile</h2>
       </div>
 
-        <div class="field-wrap">
+        <div className="field-wrap">
           <p>Username:</p>
-          <h4>Username</h4>
+          <h4 id="username">Username</h4>
         </div>
-        <div class="field-wrap">
+        <div className="field-wrap">
             <p>Email:</p>
-            <h4>myemail@gmail.com</h4>
+            <h4 id="email">myemail@gmail.com</h4>
         </div>
-        <div class="field-wrap">
+        <div className="field-wrap">
             <p>Phone number:</p>
-            <h4>0999999999</h2>
+            <h4 id="phone">0999999999</h2>
         </div>
-        <button type="button" class="classic-button"><a href="user-edit.html">Edit profile</a></button>
-        <button type="button" class="classic-button">Delete profile</button>
-        <button type="button" class="classic-button">Log out</button>
+        <button type="button" className="classNameic-button"><a href="user-edit.html">Edit profile</a></button>
+        <button type="button" className="classNameic-button">Delete profile</button>
+        <button type="button" className="classNameic-button" onclick="logout()">Log out</button>
     </div>
   </div>
+  <script src="./js/user-page.js"></script>
   </body>
 </html>

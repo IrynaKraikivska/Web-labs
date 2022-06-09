@@ -12,7 +12,7 @@
     />
   </head>
 
-  <body class="background">
+  <body class="background" onload="showdata()">
     <header class="header">
       <img src="logo.png" alt="logo" class="logo" />
       <button type="button" class="today-button" date="12th May">
@@ -24,7 +24,7 @@
       <a class="username" href="user-page.html">Username</a>
     </header>
     <div class="center">
-      <form class="block">
+      <form class="block" id="user-edit">
         <div class="center">
           <h2>Change your data</h2>
         </div>
@@ -33,10 +33,7 @@
           <input
             class="input-field"
             type="text"
-            placeholder="Enter username"
-            value="username"
             id="username"
-            required
           />
         </div>
         <div class="field-wrap">
@@ -44,21 +41,15 @@
           <input
             class="input-field"
             type="text"
-            placeholder="Enter email"
-            value="myemail@gmail.com"
             id="email"
-            required
           />
         </div>
         <div class="field-wrap">
-          <label for="phone-number">Phone number</label>
+          <label for="phone">Phone number</label>
           <input
             class="input-field"
             type="text"
-            placeholder="Enter phone number"
-            value="0999999999"
-            id="phone-number"
-            required
+            id="phone"
           />
         </div>
         <div class="field-wrap">
@@ -66,10 +57,7 @@
           <input
             class="input-field"
             type="password"
-            value="password"
-            placeholder="Enter password"
             id="password"
-            required
           />
         </div>
         <div class="field-wrap">
@@ -77,16 +65,17 @@
           <input
             class="input-field"
             type="password"
-            value="password"
-            placeholder="Confirm password"
             id="confirm-password"
-            required
           />
         </div>
         <div class="center">
           <button type="submit" class="classic-button">Submit</button>
         </div>
+        <div class="center">
+          <span class="center" id="error-message"></span>
+        </div>
       </form>
     </div>
+    <script src="./js/user-edit.js"></script>
   </body>
 </html>
